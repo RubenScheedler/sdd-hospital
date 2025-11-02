@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "SDD.Hospital.Api": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5000/swagger/index.html;https://localhost:5001/swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
