@@ -20,7 +20,7 @@ As an administrative user, I want to register a new patient so that the patient 
 1. **Given** an authenticated admin user, **When** they submit a valid registration payload, **Then** the system returns 201 Created with a unique patientId and the patient record is persisted.
 2. **Given** a registration payload missing required fields (name or age), **When** submission occurs, **Then** the system returns 400 Bad Request with a validation error detailing missing fields.
 3. **Given** a registration payload with an invalid email format, **When** submission occurs, **Then** the system returns 422 Unprocessable Entity with validation details.
-4. **Given** a duplicate patient detected by unique email and phone rule (if enforced), **When** submission occurs, **Then** the system returns 409 Conflict with explanatory message.
+4. **Given** the same email or phone exists for another record, **When** submission occurs, **Then** the system allows creation (201) and the new record is flagged for later deduplication/reconciliation; an audit entry or domain event is recorded to support reconciliation.
 
 ---
 
@@ -67,3 +67,10 @@ As an administrative user, I want to register a new patient so that the patient 
 ---
 
 **Ready for planning**: YES
+
+## Clarifications
+
+### Session 2025-11-02
+
+- Q: Who may register patients? → A: No authentication for now
+- Q: Uniqueness enforcement? → A: Do not enforce uniqueness at creation
