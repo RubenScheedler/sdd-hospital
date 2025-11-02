@@ -1,0 +1,68 @@
+openapi: 3.0.1
+info:
+  title: SDD Hospital API
+  version: 1.0.0
+paths:
+  /api/patients:
+    post:
+      summary: Register a new patient
+      operationId: registerPatient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterPatientRequest'
+      responses:
+        '201':
+          description: Patient registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatientResponse'
+        '400':
+          description: Invalid input
+      tags:
+        - Patients
+components:
+  schemas:
+    RegisterPatientRequest:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - dateOfBirth
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        dateOfBirth:
+          type: string
+          format: date
+        email:
+          type: string
+          format: email
+        phoneNumber:
+          type: string
+    PatientResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        firstName:
+          type: string
+        lastName:
+          type: string
+        dateOfBirth:
+          type: string
+          format: date
+        email:
+          type: string
+          format: email
+        phoneNumber:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
