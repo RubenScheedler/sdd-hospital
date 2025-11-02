@@ -21,8 +21,6 @@
 
 Independent test: POST `/api/patients` with valid payload returns 201 and patient persisted; follow-up GET `/api/patients/{id}` returns same record.
 
-- [ ] T010 [US1] Add RegisterPatientCommand and handler in Application (`src/SDD.Hospital.Application/Commands/RegisterPatientCommand.cs`) - Application
-- [ ] T011 [US1] Implement RegisterPatientUseCase wiring with MediatR or application layer (`src/SDD.Hospital.Application/UseCases/RegisterPatientUseCase.cs`) - Application
  - [X] T010 [US1] Add RegisterPatientCommand and handler in Application (`src/SDD.Hospital.Application/Commands/RegisterPatientCommand.cs`) - Application
  - [X] T011 [US1] Implement RegisterPatientUseCase wiring with MediatR or application layer (`src/SDD.Hospital.Application/UseCases/RegisterPatientUseCase.cs`) - Application
 - [ ] T012 [US1] Add EF Core PatientRepository implementation (`src/SDD.Hospital.Infrastructure/Repositories/PatientRepository.cs`) - Infrastructure
