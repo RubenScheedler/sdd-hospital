@@ -12,10 +12,10 @@
  - [X] T004 Add Swashbuckle (Swagger) to API project (`src/SDD.Hospital.Api/Program.cs`) - API project
  - [X] T005 Configure local dev PostgreSQL connection and migrations scaffolding (`src/SDD.Hospital.Infrastructure/`) - Infrastructure
 
-- [ ] T006 [P] Create Patient entity in Domain (`src/SDD.Hospital.Domain/Models/Patient.cs`) - [P]
-- [ ] T007 [P] Add PatientRegisteredEvent in Domain (`src/SDD.Hospital.Domain/Events/PatientRegisteredEvent.cs`) - [P]
-- [ ] T008 Implement IPatientRepository port (`src/SDD.Hospital.Application/Ports/IPatientRepository.cs`) - Application
-- [ ] T009 Implement ConsoleDomainEventPublisher for local testing (`src/SDD.Hospital.Infrastructure/Events/ConsoleDomainEventPublisher.cs`) - Infrastructure
+- [X] T006 [P] Create Patient entity in Domain (`src/SDD.Hospital.Domain/Models/Patient.cs`) - [P]
+- [X] T007 [P] Add PatientRegisteredEvent in Domain (`src/SDD.Hospital.Domain/Events/PatientRegisteredEvent.cs`) - [P]
+- [X] T008 Implement IPatientRepository port (`src/SDD.Hospital.Application/Ports/IPatientRepository.cs`) - Application
+- [X] T009 Implement ConsoleDomainEventPublisher for local testing (`src/SDD.Hospital.Infrastructure/Events/ConsoleDomainEventPublisher.cs`) - Infrastructure
 
 ## Phase 3: User Story 1 - Register patient (Priority: P1) 🎯 MVP
 
@@ -23,6 +23,8 @@ Independent test: POST `/api/patients` with valid payload returns 201 and patien
 
 - [ ] T010 [US1] Add RegisterPatientCommand and handler in Application (`src/SDD.Hospital.Application/Commands/RegisterPatientCommand.cs`) - Application
 - [ ] T011 [US1] Implement RegisterPatientUseCase wiring with MediatR or application layer (`src/SDD.Hospital.Application/UseCases/RegisterPatientUseCase.cs`) - Application
+ - [X] T010 [US1] Add RegisterPatientCommand and handler in Application (`src/SDD.Hospital.Application/Commands/RegisterPatientCommand.cs`) - Application
+ - [X] T011 [US1] Implement RegisterPatientUseCase wiring with MediatR or application layer (`src/SDD.Hospital.Application/UseCases/RegisterPatientUseCase.cs`) - Application
 - [ ] T012 [US1] Add EF Core PatientRepository implementation (`src/SDD.Hospital.Infrastructure/Repositories/PatientRepository.cs`) - Infrastructure
 - [ ] T013 [US1] Create API controller endpoint POST `/api/patients` (`src/SDD.Hospital.Api/Controllers/PatientsController.cs`) - API
 - [ ] T014 [US1] Create mapping between request DTO and domain model (`src/SDD.Hospital.Api/Models/RegisterPatientRequest.cs`) - API
