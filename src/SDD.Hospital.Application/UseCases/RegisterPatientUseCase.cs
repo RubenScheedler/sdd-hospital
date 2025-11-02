@@ -24,7 +24,7 @@ namespace SDD.Hospital.Application.UseCases
             var patient = new Patient(id, command.FirstName, command.LastName, command.DateOfBirth);
             await _repository.AddAsync(patient);
 
-            var @event = new PatientRegisteredEvent(id, command.FirstName, command.LastName, command.DateOfBirth);
+            var @event = new PatientRegisteredEvent(id, command.FirstName, command.LastName, command.DateOfBirth, DateTime.UtcNow);
             await _publisher.PublishAsync(@event);
 
             return id;

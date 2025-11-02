@@ -24,11 +24,11 @@ Independent test: POST `/api/patients` with valid payload returns 201 and patien
  - [X] T010 [US1] Add RegisterPatientCommand and handler in Application (`src/SDD.Hospital.Application/Commands/RegisterPatientCommand.cs`) - Application
  - [X] T011 [US1] Implement RegisterPatientUseCase wiring with MediatR or application layer (`src/SDD.Hospital.Application/UseCases/RegisterPatientUseCase.cs`) - Application
  - [X] T012 [US1] Add EF Core PatientRepository implementation (`src/SDD.Hospital.Infrastructure/Repositories/PatientRepository.cs`) - Infrastructure
-- [ ] T013 [US1] Create API controller endpoint POST `/api/patients` (`src/SDD.Hospital.Api/Controllers/PatientsController.cs`) - API
-- [ ] T014 [US1] Create mapping between request DTO and domain model (`src/SDD.Hospital.Api/Models/RegisterPatientRequest.cs`) - API
-- [ ] T015 [US1] Add domain validation tests for Patient creation (`tests/SDD.Hospital.Domain.Tests/PatientTests.cs`) - tests
-- [ ] T016 [US1] Add integration test for registration endpoint (`tests/SDD.Hospital.Api.IntegrationTests/RegisterPatientTests.cs`) - tests
-- [ ] T017 [US1] Ensure PatientRegisteredEvent is published when registration succeeds (`src/SDD.Hospital.Application/`) - Application
+- [X] T013 [US1] Create API controller endpoint POST `/api/patients` (`src/SDD.Hospital.Api/Controllers/PatientsController.cs`) - API
+- [X] T014 [US1] Create mapping between request DTO and domain model (`src/SDD.Hospital.Api/Models/RegisterPatientRequest.cs`) - API
+- [X] T015 [US1] Add domain validation tests for Patient creation (`tests/SDD.Hospital.Domain.Tests/PatientTests.cs`) - tests
+- [X] T016 [US1] Add integration test for registration endpoint (`tests/SDD.Hospital.Api.IntegrationTests/RegisterPatientTests.cs`) - tests
+- [X] T017 [US1] Ensure PatientRegisteredEvent is published when registration succeeds (`src/SDD.Hospital.Application/`) - Application
 - [ ] T018 [US1] Add logging and OpenTelemetry tracing around registration flow (`src/SDD.Hospital.Api/`, `src/SDD.Hospital.Application/`) - cross-cutting
 
 ## Final Phase: Polish & Cross-Cutting Concerns

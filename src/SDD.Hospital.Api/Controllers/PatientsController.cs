@@ -30,4 +30,5 @@ namespace SDD.Hospital.Api.Controllers
     }
 
     public record RegisterPatientRequest(string FirstName, string LastName, DateTime DateOfBirth);
+    public record PatientResponse(Guid Id);
 }
