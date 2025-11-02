@@ -8,3 +8,5 @@ For this feature (register patients): Create a REST endpoint, let it call a use 
 **Note**: It did not follow instructions the first time and started generating code.
 
 Execute phase 0, 1, 2.
+
+**Note**: Really problematic if you are switched to the correct branch automatically.
