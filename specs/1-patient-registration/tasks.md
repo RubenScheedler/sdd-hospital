@@ -29,7 +29,6 @@ Independent test: POST `/api/patients` with valid payload returns 201 and patien
 - [X] T015 [US1] Add domain validation tests for Patient creation (`tests/SDD.Hospital.Domain.Tests/PatientTests.cs`) - tests
 - [X] T016 [US1] Add integration test for registration endpoint (`tests/SDD.Hospital.Api.IntegrationTests/RegisterPatientTests.cs`) - tests
 - [X] T017 [US1] Ensure PatientRegisteredEvent is published when registration succeeds (`src/SDD.Hospital.Application/`) - Application
-- [ ] T018 [US1] Add logging and OpenTelemetry tracing around registration flow (`src/SDD.Hospital.Api/`, `src/SDD.Hospital.Application/`) - cross-cutting
 
 ## Final Phase: Polish & Cross-Cutting Concerns
 - [ ] T019 Add input validation and error handling middleware (`src/SDD.Hospital.Api/`) - API
