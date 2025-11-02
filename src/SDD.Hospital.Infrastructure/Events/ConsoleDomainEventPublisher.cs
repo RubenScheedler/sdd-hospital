@@ -9,7 +9,7 @@ namespace SDD.Hospital.Infrastructure.Events
     {
         public Task PublishAsync(object @event)
         {
-            var json = JsonSerializer.Serialize(@event);
+            var json = JsonSerializer.Serialize(@event, new JsonSerializerOptions { WriteIndented = true });
             Console.WriteLine($"[DomainEvent] {@event.GetType().Name}: {json}");
             return Task.CompletedTask;
         }

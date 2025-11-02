@@ -32,6 +32,8 @@ components:
         - firstName
         - lastName
         - dateOfBirth
+        - email
+        - phoneNumber
       properties:
         firstName:
           type: string
