@@ -15,14 +15,14 @@ namespace SDD.Hospital.Domain.Models
         // EF Core and serializers
         private Patient() { }
 
-        public Patient(Guid? id, string firstName, string lastName, DateTime dateOfBirth, string? email = null, string? phoneNumber = null)
+        public Patient(Guid? id, string firstName, string lastName, DateTime dateOfBirth, string email, string phoneNumber)
         {
             Id = (id == null || id == Guid.Empty) ? Guid.NewGuid() : id.Value;
             FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
             LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
             DateOfBirth = dateOfBirth;
-            Email = email;
-            PhoneNumber = phoneNumber;
+            Email = string.IsNullOrWhiteSpace(email) ? throw new ArgumentNullException(nameof(email)) : email;
+            PhoneNumber = string.IsNullOrWhiteSpace(phoneNumber) ? throw new ArgumentNullException(nameof(phoneNumber)) : phoneNumber;
             CreatedAt = DateTime.UtcNow;
         }
     }

@@ -9,7 +9,13 @@ namespace SDD.Hospital.Domain.Tests
         [Fact]
         public void CreatingPatient_WithMissingNames_Throws()
         {
-            Assert.Throws<ArgumentNullException>(() => new Patient(null, null!, "", DateTime.UtcNow));
+            Assert.Throws<ArgumentNullException>(() => new Patient(null, null!, "", DateTime.UtcNow, "a@b.com", "123"));
+        }
+
+        [Fact]
+        public void CreatingPatient_WithMissingEmail_Throws()
+        {
+            Assert.Throws<ArgumentNullException>(() => new Patient(Guid.NewGuid(), "John", "Doe", new DateTime(1990,1,1), "", "12345"));
         }
 
         [Fact]

@@ -24,7 +24,9 @@ namespace SDD.Hospital.Api.IntegrationTests
             {
                 firstName = "Alice",
                 lastName = "Smith",
-                dateOfBirth = "1995-05-01"
+                dateOfBirth = "1995-05-01",
+                email = "alice@example.com",
+                phoneNumber = "+1234567890"
             };
 
             var res = await client.PostAsJsonAsync("/api/patients", req);

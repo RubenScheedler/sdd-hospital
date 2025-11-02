@@ -21,10 +21,10 @@ namespace SDD.Hospital.Application.UseCases
         public async Task<Guid> Handle(RegisterPatientCommand command)
         {
             var id = Guid.NewGuid();
-            var patient = new Patient(id, command.FirstName, command.LastName, command.DateOfBirth);
+            var patient = new Patient(id, command.FirstName, command.LastName, command.DateOfBirth, command.Email, command.PhoneNumber);
             await _repository.AddAsync(patient);
 
-            var @event = new PatientRegisteredEvent(id, command.FirstName, command.LastName, command.DateOfBirth, DateTime.UtcNow);
+            var @event = new PatientRegisteredEvent(id, command.FirstName, command.LastName, command.DateOfBirth, command.Email, command.PhoneNumber, DateTime.UtcNow);
             await _publisher.PublishAsync(@event);
 
             return id;
