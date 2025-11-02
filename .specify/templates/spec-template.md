@@ -24,6 +24,8 @@
 
 [Describe this user journey in plain language]
 
+**Constitution Compliance**: For each user story include: impacted domain entities/aggregates, expected domain events, and which layer (domain/application/infrastructure) contains the behavior. Tests MUST be listed and prioritized (unit tests first). 
+
 **Why this priority**: [Explain the value and why it has this priority level]
 
 **Independent Test**: [Describe how this can be tested independently - e.g., "Can be fully tested by [specific action] and delivers [specific value]"]
@@ -89,6 +91,8 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+
+**Testing Requirement (mandatory)**: Each functional requirement must map to one or more automated tests. Tests MUST be included in the spec as either unit tests (domain/application) or integration/contract tests (infrastructure and API boundaries). Tests are written first and expected to fail before implementation begins.
 
 *Example of marking unclear requirements:*
 

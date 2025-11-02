@@ -69,6 +69,13 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] T008 Configure error handling and logging infrastructure
 - [ ] T009 Setup environment configuration management
 
+Important: Foundational tasks MUST include:
+
+- [ ] Define domain assemblies/projects and Clear Architecture boundaries (Domain, Application, Infrastructure, Api)
+- [ ] Create in-memory domain event dispatcher for local testing
+- [ ] Add xUnit test project templates and CI steps that run unit tests first
+- [ ] Configure OpenTelemetry and structured logging in baseline infra
+
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
 ---
@@ -85,6 +92,12 @@ Examples of foundational tasks (adjust based on your project):
 
 - [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
 - [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+
+Mandatory test-first tasks (per story):
+
+- [ ] T00A [US1] Add unit tests for domain behavior and edge cases (must fail initially)
+- [ ] T00B [US1] Add unit tests for application/use-case behavior (must fail initially)
+- [ ] T00C [US1] Add integration/contract tests for API or message contracts
 
 ### Implementation for User Story 1
 

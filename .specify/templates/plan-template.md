@@ -17,21 +17,21 @@
   the iteration process.
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: .NET X (specify LTS version, e.g., .NET 8)  
+**Primary Dependencies**: list runtime libraries (EF Core, MediatR, OpenTelemetry, xUnit/NUnit/MSTest)  
+**Storage**: PostgreSQL (or specify) with migrations (EF Core Migrations)  
+**Testing**: xUnit (recommended), test-first approach REQUIRED: unit tests for domain & application layers, integration tests for infra/contract boundaries  
+**Target Platform**: Linux containers or Azure App Service (specify)  
+**Project Type**: backend, Domain-Driven Design with Clean Architecture  
+**Performance Goals**: [define per feature]  
+**Constraints**: adhere to constitution: domain-first, clean-architecture boundaries, domain events for cross-cutting changes  
+**Scale/Scope**: [define per feature]
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+This plan MUST explicitly state how the feature adheres to the constitution: domain model changes, impacted aggregates, produced domain events, required infrastructure adapters, testing plan (unit-first), and observability metrics. If the plan includes breaking contract changes, include migration strategy and version bump rationale.
 
 ## Project Structure
 
