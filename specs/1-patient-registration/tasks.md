@@ -32,10 +32,10 @@ Independent test: POST `/api/patients` with valid payload returns 201 and patien
  - [X] T018 [US1] Require `email` and `phoneNumber` on patient creation via the API: update request DTO (`src/SDD.Hospital.Api/Models/RegisterPatientRequest.cs`), update `RegisterPatientCommand` (`src/SDD.Hospital.Application/Commands/RegisterPatientCommand.cs`) and `RegisterPatientUseCase` (`src/SDD.Hospital.Application/UseCases/RegisterPatientUseCase.cs`) to accept and pass the fields, update `Patient` constructor (`src/SDD.Hospital.Domain/Models/Patient.cs`) to require and validate them, add/extend domain tests (`tests/SDD.Hospital.Domain.Tests/PatientTests.cs`) and integration tests (`tests/SDD.Hospital.Api.IntegrationTests/RegisterPatientTests.cs`), and update OpenAPI contract (`specs/1-patient-registration/contracts/openapi.yaml`). - API/Application/Domain/Tests
 
 ## Final Phase: Polish & Cross-Cutting Concerns
-- [ ] T019 Add input validation and error handling middleware (`src/SDD.Hospital.Api/`) - API
-- [ ] T020 Update Swagger/OpenAPI with request/response schemas (`src/SDD.Hospital.Api/`) - API
-- [ ] T021 Add CI job to run unit and integration tests and measure coverage (`.github/workflows/`) - CI
-- [ ] T022 Add README snippet in `specs/1-patient-registration/quickstart.md` showing how to run integration tests locally - docs
+ - [X] T019 Add input validation and error handling middleware (`src/SDD.Hospital.Api/`) - API
+ - [X] T020 Update Swagger/OpenAPI with request/response schemas (`src/SDD.Hospital.Api/`) - API
+ - [X] T021 Add CI job to run unit and integration tests and measure coverage (`.github/workflows/`) - CI
+ - [X] T022 Add README snippet in `specs/1-patient-registration/quickstart.md` showing how to run integration tests locally - docs
 
 ## Dependencies & Execution Order
 - Phase 1 -> Phase 2 -> Phase 3 -> Final Phase

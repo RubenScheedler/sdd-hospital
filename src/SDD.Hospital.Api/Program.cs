@@ -22,6 +22,9 @@ builder.Services.AddScoped<RegisterPatientUseCase>();
 
 var app = builder.Build();
 
+// Global middleware
+app.UseMiddleware<SDD.Hospital.Api.Middleware.ExceptionHandlingMiddleware>();
+
 if (app.Environment.IsDevelopment() || true)
 {
     app.UseSwagger();

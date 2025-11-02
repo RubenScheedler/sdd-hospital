@@ -24,6 +24,13 @@
 ## Register a Patient
 - Use the Swagger UI to POST to `/api/patients` with the required fields.
 
+## Running Integration Tests
+
+- From repo root run the integration test project:
+   ```powershell
+   dotnet test tests/SDD.Hospital.Api.IntegrationTests/SDD.Hospital.Api.IntegrationTests.csproj
+   ```
+
 ## Database
 - The API uses EF Core. Update connection string in `appsettings.json` if needed.
 
